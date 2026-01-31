@@ -6,7 +6,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-construccion.jpg"
+          src={`${import.meta.env.BASE_URL}hero-construccion.jpg`}
           alt="Construcción profesional"
           className="w-full h-full object-cover"
         />
@@ -30,8 +30,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-            Más de 20 años de experiencia en construcción residencial, comercial e industrial. 
-            Transformamos tus ideas en realidad con materiales de primera calidad y un equipo 
+            Más de 20 años de experiencia en construcción residencial, comercial e industrial.
+            Transformamos tus ideas en realidad con materiales de primera calidad y un equipo
             profesional comprometido.
           </p>
 

@@ -5,37 +5,37 @@ const servicios = [
     icon: Home,
     title: 'Construcción de Viviendas',
     description: 'Diseñamos y construimos la casa de tus sueños, desde la fundación hasta los últimos detalles de terminación.',
-    image: '/proyecto-casa1.jpg',
+    image: `${import.meta.env.BASE_URL}proyecto-casa1.jpg`,
   },
   {
     icon: Building2,
     title: 'Obras Comerciales',
     description: 'Construcción de locales comerciales, oficinas y edificios con los más altos estándares de calidad.',
-    image: '/proyecto-edificio.jpg',
+    image: `${import.meta.env.BASE_URL}proyecto-edificio.jpg`,
   },
   {
     icon: Wrench,
     title: 'Remodelaciones',
     description: 'Transformamos y modernizamos espacios existentes para darles nueva vida y funcionalidad.',
-    image: '/servicio-remodelacion.jpg',
+    image: `${import.meta.env.BASE_URL}servicio-remodelacion.jpg`,
   },
   {
     icon: Droplets,
     title: 'Piscinas y Espacios Verde',
     description: 'Construcción de piscinas, quinchos y áreas de esparcimiento para disfrutar al aire libre.',
-    image: '/servicio-piscina.jpg',
+    image: `${import.meta.env.BASE_URL}servicio-piscina.jpg`,
   },
   {
     icon: Zap,
     title: 'Instalaciones Eléctricas',
     description: 'Instalaciones eléctricas completas, tanto para obras nuevas como remodelaciones.',
-    image: '/servicio-electricidad.jpg',
+    image: `${import.meta.env.BASE_URL}servicio-electricidad.jpg`,
   },
   {
     icon: Hammer,
     title: 'Albañilería General',
     description: 'Trabajos de albañilería, mampostería, revoques y todo tipo de construcción en seco.',
-    image: '/servicio-albanileria.jpg',
+    image: `${import.meta.env.BASE_URL}servicio-albanileria.jpg`,
   },
 ]
 
@@ -53,7 +53,7 @@ const Servicios = () => {
             <span className="text-orange-500">Integrales</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ofrecemos una amplia gama de servicios de construcción para satisfacer 
+            Ofrecemos una amplia gama de servicios de construcción para satisfacer
             todas tus necesidades, desde proyectos residenciales hasta obras comerciales.
           </p>
         </div>

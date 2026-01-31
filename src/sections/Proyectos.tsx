@@ -10,7 +10,7 @@ const proyectos = [
     year: '2024',
     area: '280 m²',
     description: 'Construcción completa de vivienda unifamiliar de dos plantas con diseño contemporáneo, jardín y piscina.',
-    image: '/proyecto-casa1.jpg',
+    image: `${import.meta.env.BASE_URL}proyecto-casa1.jpg`,
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const proyectos = [
     year: '2023',
     area: '1.200 m²',
     description: 'Construcción de edificio residencial de 6 pisos con 12 unidades de departamentos.',
-    image: '/proyecto-edificio.jpg',
+    image: `${import.meta.env.BASE_URL}proyecto-edificio.jpg`,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const proyectos = [
     year: '2024',
     area: '150 m²',
     description: 'Remodelación integral de interior con diseño industrial, ladrillo visto y ampliación de espacios.',
-    image: '/proyecto-interior.jpg',
+    image: `${import.meta.env.BASE_URL}proyecto-interior.jpg`,
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const proyectos = [
     year: '2024',
     area: '35 m²',
     description: 'Remodelación de cocina con acabados de lujo, isla central y equipamiento de última generación.',
-    image: '/servicio-remodelacion.jpg',
+    image: `${import.meta.env.BASE_URL}servicio-remodelacion.jpg`,
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const proyectos = [
     year: '2023',
     area: '45 m²',
     description: 'Construcción de piscina de hormigón con sistema de filtrado, iluminación LED y deck de madera.',
-    image: '/servicio-piscina.jpg',
+    image: `${import.meta.env.BASE_URL}servicio-piscina.jpg`,
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const proyectos = [
     year: '2024',
     area: '200 m²',
     description: 'Instalación eléctrica completa para vivienda unifamiliar con tablero inteligente.',
-    image: '/servicio-electricidad.jpg',
+    image: `${import.meta.env.BASE_URL}servicio-electricidad.jpg`,
   },
 ]
 
@@ -87,7 +87,7 @@ const Proyectos = () => {
             Proyectos <span className="text-orange-500">Realizados</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Conoce algunos de nuestros trabajos más destacados. Cada proyecto 
+            Conoce algunos de nuestros trabajos más destacados. Cada proyecto
             refleja nuestro compromiso con la calidad y la satisfacción del cliente.
           </p>
         </div>
@@ -98,11 +98,10 @@ const Proyectos = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-                selectedCategory === category
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${selectedCategory === category
                   ? 'bg-orange-500 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -125,7 +124,7 @@ const Proyectos = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
+
                 {/* Overlay Content */}
                 <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div>
