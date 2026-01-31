@@ -37,12 +37,12 @@ const Footer = () => {
               </div>
             </a>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Más de 20 años de experiencia construyendo sueños en Buenos Aires. 
+              Más de 20 años de experiencia construyendo sueños en Buenos Aires.
               Calidad, compromiso y profesionalismo en cada obra.
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-orange-500 transition-colors"
@@ -50,7 +50,7 @@ const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/pablovmann/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-orange-500 transition-colors"
@@ -109,11 +109,11 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:info@construccionesvelazquezmann.com"
+                  href="mailto:Pablo_vmnn@.Hotmail.com"
                   className="flex items-center gap-3 text-gray-400 hover:text-orange-500 transition-colors"
                 >
                   <Mail className="w-5 h-5 text-orange-500" />
-                  info@construccionesvelazquezmann.com
+                  Pablo_vmnn@.Hotmail.com
                 </a>
               </li>
               <li>
