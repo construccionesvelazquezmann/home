@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Phone, MapPin, Mail, Clock, Send, CheckCircle } from 'lucide-react'
+import { Phone, MapPin, Mail, Clock, MessageCircle } from 'lucide-react'
 
 const contactInfo = [
   {
@@ -29,39 +28,9 @@ const contactInfo = [
 ]
 
 const Contacto = () => {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    telefono: '',
-    tipoObra: '',
-    mensaje: '',
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulate form submission
-    setIsSubmitted(true)
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        nombre: '',
-        email: '',
-        telefono: '',
-        tipoObra: '',
-        mensaje: '',
-      })
-    }, 3000)
-  }
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+  const whatsappNumber = '5491140289266';
+  const whatsappMessage = 'Hola! Me interesa obtener información sobre sus servicios de construcción.';
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <section id="contacto" className="py-20 bg-gray-50">
@@ -75,118 +44,34 @@ const Contacto = () => {
             Solicitá tu <span className="text-orange-500">Presupuesto</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Completá el formulario y nos pondremos en contacto con vos a la brevedad 
-            para asesorarte sobre tu proyecto.
+            Contactanos directamente y te asesoraremos sobre tu proyecto.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            {isSubmitted ? (
-              <div className="flex flex-col items-center justify-center h-full py-12">
-                <div className="p-4 bg-green-100 rounded-full mb-4">
-                  <CheckCircle className="w-12 h-12 text-green-600" />
-                </div>
+          {/* WhatsApp CTA (Replaces Form) */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-center items-center text-center space-y-6">
+             <div className="p-6 bg-green-100 rounded-full">
+                <MessageCircle className="w-16 h-16 text-green-600" />
+             </div>
+             <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  ¡Mensaje Enviado!
+                  ¡Hablemos por WhatsApp!
                 </h3>
-                <p className="text-gray-600 text-center">
-                  Gracias por contactarnos. Te responderemos a la brevedad.
+                <p className="text-gray-600 max-w-sm mx-auto">
+                  La forma más rápida y directa de comunicarte con nosotros. Escribinos para coordinar una visita o pedir tu presupuesto.
                 </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Nombre completo *
-                    </label>
-                    <input
-                      type="text"
-                      name="nombre"
-                      value={formData.nombre}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Teléfono *
-                    </label>
-                    <input
-                      type="tel"
-                      name="telefono"
-                      value={formData.telefono}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                      placeholder="+54 9 11 XXXX XXXX"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Tipo de obra *
-                  </label>
-                  <select
-                    name="tipoObra"
-                    value={formData.tipoObra}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                  >
-                    <option value="">Seleccioná el tipo de obra</option>
-                    <option value="vivienda">Construcción de vivienda</option>
-                    <option value="remodelacion">Remodelación</option>
-                    <option value="comercial">Obra comercial</option>
-                    <option value="piscina">Piscina / Exterior</option>
-                    <option value="instalaciones">Instalaciones</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje *
-                  </label>
-                  <textarea
-                    name="mensaje"
-                    value={formData.mensaje}
-                    onChange={handleChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none"
-                    placeholder="Contanos sobre tu proyecto..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all hover:scale-[1.02]"
-                >
-                  <Send className="w-5 h-5" />
-                  Enviar Consulta
-                </button>
-              </form>
-            )}
+             </div>
+             
+             <a 
+               href={whatsappUrl}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-flex items-center gap-2 px-8 py-4 bg-green-500 text-white font-bold text-lg rounded-full hover:bg-green-600 transition-all hover:scale-105 shadow-md"
+             >
+                <MessageCircle className="w-6 h-6" />
+                Enviar Mensaje
+             </a>
           </div>
 
           {/* Contact Info */}

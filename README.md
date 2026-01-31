@@ -1,15 +1,37 @@
-# React + TypeScript + Vite
+# Construcciones Velazquez Mann
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Servicios de Construcción y Remodelación
 
-Currently, two official plugins are available:
+Somos una empresa dedicada a la construcción y remodelación de espacios, comprometidos con la calidad y la satisfacción de nuestros clientes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Nuestros Servicios:**
+- Construcción de Viviendas
+- Obras Comerciales
+- Remodelaciones
+- Piscinas y Espacios Verdes
+- Instalaciones Eléctricas
+- Albañilería General
 
-## React Compiler
+## Contacto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Teléfono/WhatsApp:** +54 9 11 4028-9266  
+**Dirección:** Sardi 136, Monte Grande, Buenos Aires  
+**Email:** info@construccionesvelazquezmann.com  
+**Horario:** Lun - Vie: 8:00 - 18:00
+
+## Desarrollo
+
+Para ejecutar el proyecto localmente:
+
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+
+2. Iniciar servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
 ## Expanding the ESLint configuration
 
